@@ -1,0 +1,35 @@
+{
+  "request": {
+    "CN": "mqtt.<domain>.io",
+    "key": {
+      "algo": "ecdsa",
+      "size": 256
+    },
+    "hosts": [
+      "mqtt.<domain>.io",
+      "thor.<namespace>.svc.cluster.local",
+      "127.0.0.1",
+      "0.0.0.0",
+      "localhost",
+      "thor"
+    ]
+  },
+  "profiles": {
+    "paths": {
+      "private_key": "server.key",
+      "certificate": "server.pem",
+      "bundle": "cert-chain.pem"
+    },
+    "cfssl": {
+      "profile": "server",
+      "remote": "http://localhost:8888"
+    }
+  },
+  "roots": [
+    {
+      "type": "system"
+    }
+  ],
+  "client_roots": [
+  ]
+}

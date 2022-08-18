@@ -1,0 +1,11 @@
+logging_level = "debug"
+
+crl_update_interval = 300
+crl_url = "http://0.0.0.0:51116"
+
+downstream_addr = "0.0.0.0:8885"
+upstream_addr = "0.0.0.0:1883"
+tls_definition = "./tls.json"
+
+peer_cert_as_username = true
+peer_cert_as_clientid = true
